@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- Author: Ahmad Sharique · eshariq.am@gmail.com · IABG mbH -->
+<!-- Project: FRMCS Pioneer Stack · IEEE VTC 2026 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRMCS Pioneer Stack — Ahmad Sharique</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img src="images/ep3-logo.png" alt="FRMCS" />
+    <span>FRMCS PIONEER STACK</span>
+  </div>
+  <div class="nav-links">
+    <a href="#architecture">Architecture</a>
+    <a href="#episodes">Episodes</a>
+    <a href="#diagrams">Diagrams</a>
+    <a href="#papers">Research</a>
+    <a href="https://github.com/shariquetelco" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>FRMCS PIONEER STACK</h1>
+  <p>
+    An open, cross-layer security research testbed for the<br/>
+    Future Railway Mobile Communication System (FRMCS)<br/>
+    built on the Munich–Augsburg Deutsche Bahn corridor.
+  </p>
+  <div class="badges">
+    <span class="badge badge-cyan">5G Railway</span>
+    <span class="badge badge-blue">FastAPI · React</span>
+    <span class="badge badge-green">ETSI TS 102941</span>
+    <span class="badge badge-yellow">IEEE VTC 2026</span>
+    <span class="badge badge-blue">IABG mbH</span>
+    <span class="badge badge-cyan">Ahmad Sharique</span>
+  </div>
+</div>
+
+<!-- ARCHITECTURE -->
+<section id="architecture">
+  <h2>SYSTEM ARCHITECTURE</h2>
+
+  <div class="flow">
+    <div class="flow-box ep2">
+      <div class="ep">EPISODE 2</div>
+      <div class="name">RailThreat</div>
+      <div class="role">RF Threat Detection</div>
+    </div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box ep3">
+      <div class="ep">EPISODE 3</div>
+      <div class="name">RAIL-IQ</div>
+      <div class="role">Corridor Orchestration</div>
+    </div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box ep1">
+      <div class="ep">EPISODE 1</div>
+      <div class="name">RailGuard-PKI</div>
+      <div class="role">PKI Identity Action</div>
+    </div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box ep7">
+      <div class="ep">EPISODE 7</div>
+      <div class="name">RailOrbit</div>
+      <div class="role">Satellite Failover</div>
+    </div>
+  </div>
+
+  <p style="text-align:center; color: var(--muted); font-size:13px;">
+    Munich ── T1 ── T2 ── T3 ── T4 ── T5 ── T6 ── T7 ── T8 ── T9 ── T10 ── Augsburg
+    <br/>60km · 10 FRMCS towers · Deutsche Bahn corridor
+  </p>
+</section>
+
+<!-- EPISODES -->
+<section id="episodes">
+  <h2>THE 7 EPISODES</h2>
+  <div class="episodes-grid">
+
+    <!-- EP1 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep1-logo.png" alt="RailGuard-PKI" />
+        <div>
+          <div class="ep-num">Episode 1</div>
+          <div class="ep-title">RailGuard-PKI</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        PKI-based device identity and authorization engine for FRMCS.
+        Implements ETSI TS 102941 Authorization Ticket issuance using ECDSA-P256.
+        Includes NOC dashboard and Rail-AA terminal.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">ECDSA-P256</span>
+        <span class="tech-tag">ETSI TS 102941</span>
+        <span class="tech-tag">ECIES</span>
+        <span class="tech-tag">HKDF-SHA256</span>
+        <span class="tech-tag">Flask</span>
+      </div>
+      <div class="status-done">✅ Complete</div>
+      <br/>
+      <a href="https://github.com/shariquetelco/RailGuard-PKI" target="_blank">→ View on GitHub</a>
+    </div>
+
+    <!-- EP2 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep2-logo.png" alt="RailThreat" />
+        <div>
+          <div class="ep-num">Episode 2</div>
+          <div class="ep-title">RailThreat-FRMCS-LAB</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        RF and RAN threat detection engine for FRMCS base stations.
+        11-feature PLS+RAN fusion classifier detecting jamming, spoofing,
+        and replay attacks with confidence scoring.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">scikit-learn</span>
+        <span class="tech-tag">11-feature PLS+RAN</span>
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+      </div>
+      <div class="status-building">🔄 Building</div>
+      <br/>
+      <a href="https://github.com/shariquetelco/RailThreat-FRMCS-LAB" target="_blank">→ View on GitHub</a>
+    </div>
+
+    <!-- EP3 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep3-logo.png" alt="RAIL-IQ" />
+        <div>
+          <div class="ep-num">Episode 3</div>
+          <div class="ep-title">FRMCS-RAIL-IQ</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        Corridor-level risk orchestration engine. Models adjacency threat
+        propagation across 10 Munich–Augsburg towers. Fires deterministic
+        response actions: PKI pause, handover, NTN standby.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">Risk Engine</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Leaflet</span>
+        <span class="tech-tag">Claude Haiku</span>
+      </div>
+      <div class="status-building">🔄 Building</div>
+      <br/>
+      <a href="https://github.com/shariquetelco/FRMCS-RAIL-IQ" target="_blank">→ View on GitHub</a>
+    </div>
+
+    <!-- EP4 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep4-logo.png" alt="RailWave" />
+        <div>
+          <div class="ep-num">Episode 4</div>
+          <div class="ep-title">RailWave</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        Real SDR FRMCS testbed validating NVIDIA Sionna digital twin
+        against measured RF metrics. USRP X310 as gNB, B210 as UE,
+        HackRF for interference injection.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">OAI</span>
+        <span class="tech-tag">Open5GS</span>
+        <span class="tech-tag">GNU Radio</span>
+        <span class="tech-tag">NVIDIA Sionna</span>
+        <span class="tech-tag">USRP X310</span>
+      </div>
+      <div class="status-planned">📋 Planned</div>
+    </div>
+
+    <!-- EP5 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep5-logo.png" alt="RailShield" />
+        <div>
+          <div class="ep-num">Episode 5</div>
+          <div class="ep-title">RailShield</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        Kernel-level packet anomaly detection combining eBPF/XDP
+        with RF KPIs from Episode 2. Correlates network-layer
+        anomalies with radio threat classifications.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">eBPF</span>
+        <span class="tech-tag">XDP</span>
+        <span class="tech-tag">libbpf</span>
+        <span class="tech-tag">bcc</span>
+        <span class="tech-tag">Prometheus</span>
+      </div>
+      <div class="status-planned">📋 Planned</div>
+    </div>
+
+    <!-- EP6 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep6-logo.png" alt="Rail-QSecure" />
+        <div>
+          <div class="ep-num">Episode 6</div>
+          <div class="ep-title">Rail-QSecure</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        Post-quantum cryptography evaluation for FRMCS identity.
+        Replaces ECDSA-P256 with ML-KEM and ML-DSA under degraded
+        RF conditions from Episode 4.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">ML-KEM (Kyber)</span>
+        <span class="tech-tag">ML-DSA (Dilithium)</span>
+        <span class="tech-tag">liboqs</span>
+        <span class="tech-tag">NIST PQC</span>
+      </div>
+      <div class="status-planned">📋 Planned</div>
+    </div>
+
+    <!-- EP7 -->
+    <div class="episode-card">
+      <div class="ep-header">
+        <img src="images/ep7-logo.png" alt="RailOrbit" />
+        <div>
+          <div class="ep-num">Episode 7</div>
+          <div class="ep-title">RailOrbit</div>
+        </div>
+      </div>
+      <div class="ep-desc">
+        Terrestrial to satellite failover triggered by Episode 3
+        orchestration layer. GEO/LEO simulation with delay injection.
+        Validates FRMCS continuity under total terrestrial failure.
+      </div>
+      <div class="ep-tech">
+        <span class="tech-tag">OAI NTN</span>
+        <span class="tech-tag">n254 S-band</span>
+        <span class="tech-tag">GEO/LEO sim</span>
+        <span class="tech-tag">Open5GS</span>
+      </div>
+      <div class="status-partial">🟡 Partial</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIAGRAMS -->
+<section id="diagrams">
+  <h2>ARCHITECTURE &amp; CALL FLOWS</h2>
+  <div class="diagram-grid">
+
+    <div class="diagram-card">
+      <img src="images/ep1-System-Architecture.png" alt="Episode 1 Architecture" />
+      <div class="diagram-label">Episode 1 — RailGuard-PKI System Architecture</div>
+    </div>
+
+    <div class="diagram-card">
+      <img src="images/ep1-call_flow.png" alt="Episode 1 Call Flow" />
+      <div class="diagram-label">Episode 1 — AT Issuance Call Flow</div>
+    </div>
+
+    <div class="diagram-card">
+      <img src="images/ep3-system_architecture.png" alt="Episode 3 Architecture" />
+      <div class="diagram-label">Episode 3 — RAIL-IQ System Architecture</div>
+    </div>
+
+    <div class="diagram-card">
+      <img src="images/ep3-call_flow.png" alt="Episode 3 Call Flow" />
+      <div class="diagram-label">Episode 3 — Corridor Orchestration Call Flow</div>
+    </div>
+
+    <div class="diagram-card">
+      <img src="images/ep1_Railguard-PKI.gif" alt="RailGuard PKI Demo" />
+      <div class="diagram-label">Episode 1 — RailGuard-PKI Live Demo</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="papers">
+  <h2>RESEARCH CONTEXT</h2>
+  <p style="color: var(--muted); max-width: 700px; margin-bottom: 24px;">
+    This stack targets <strong style="color:var(--text)">IEEE VTC 2026</strong>.
+    It demonstrates the first open, end-to-end FRMCS security architecture
+    covering RF detection, corridor orchestration, PKI identity management,
+    kernel defense, post-quantum cryptography, and satellite failover
+    in a single connected system.
+  </p>
+  <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 20px; max-width: 700px; font-family: monospace; font-size: 13px; color: var(--muted);">
+    RF attack<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 2 — ML detection<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 3 — corridor orchestration<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 1 — PKI identity action<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 5 — kernel anomaly correlation<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 6 — post-quantum rekeying<br/>
+    &nbsp;&nbsp;&nbsp;↓ Episode 7 — satellite failover<br/>
+    <br/>
+    <span style="color: var(--cyan)">No existing open-source project covers this full stack.</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>Ahmad Sharique · IABG mbH</span>
+  <span>FRMCS Pioneer Stack · IEEE VTC 2026 · © 2026</span>
+</footer>
+
+</body>
+</html>
