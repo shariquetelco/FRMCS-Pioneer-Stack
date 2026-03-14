@@ -14,9 +14,8 @@
 
 | Episode 1 | Episode 2 | Episode 3 |
 |:---------:|:---------:|:---------:|
-| ![RailGuard-PKI](https://raw.githubusercontent.com/shariquetelco/RailGuard-PKI/main/assets/images/logo.png) | ![RailThreat](https://raw.githubusercontent.com/shariquetelco/RailThreat-FRMCS-LAB/c44d259fb753f4d89d9ed3097cf483ea1e2dd66e/logo.png) | ![RAIL-IQ](https://raw.githubusercontent.com/shariquetelco/FRMCS-RAIL-IQ/main/diagrams/logo.png) |
+| ![RailGuard-PKI](docs/ep1-logo.png) | ![RailThreat](docs/ep2-logo.png) | ![RAIL-IQ](https://raw.githubusercontent.com/shariquetelco/FRMCS-RAIL-IQ/main/diagrams/logo.png) |
 | [RailGuard-PKI](https://github.com/shariquetelco/RailGuard-PKI) | [RailThreat-FRMCS-LAB](https://github.com/shariquetelco/RailThreat-FRMCS-LAB) | [FRMCS-RAIL-IQ](https://github.com/shariquetelco/FRMCS-RAIL-IQ) |
-
 ---
 
 > An open, cross-layer security research testbed for the  
