@@ -12,6 +12,11 @@
 **Target:** IEEE VTC 2026  
 **Status:** Active Research
 
+| Episode 1 | Episode 2 | Episode 3 |
+|:---------:|:---------:|:---------:|
+| ![RailGuard-PKI](https://raw.githubusercontent.com/shariquetelco/RailGuard-PKI/main/assets/images/logo.png) | ![RailThreat](https://raw.githubusercontent.com/shariquetelco/RailThreat-FRMCS-LAB/main/logo.png) | ![RAIL-IQ](https://raw.githubusercontent.com/shariquetelco/FRMCS-RAIL-IQ/main/diagrams/logo.png) |
+| [RailGuard-PKI](https://github.com/shariquetelco/RailGuard-PKI) | [RailThreat-FRMCS-LAB](https://github.com/shariquetelco/RailThreat-FRMCS-LAB) | [FRMCS-RAIL-IQ](https://github.com/shariquetelco/FRMCS-RAIL-IQ) |
+
 ---
 
 > An open, cross-layer security research testbed for the  
@@ -30,15 +35,20 @@ This stack is the only open-source, end-to-end FRMCS security simulation coverin
 
 ## The Stack — 7 Episodes
 ```
-RF Attack
-    ↓
-Episode 2 — RailThreat        ML-based RF threat detection
-    ↓
-Episode 3 — FRMCS-RAIL-IQ     Corridor risk orchestration
-    ↓
-Episode 1 — RailGuard-PKI     PKI identity & AT management
-    ↓
-Episode 7 — NTN Failover      Satellite backup when terrestrial fails
+RF Attack on FRMCS Tower
+         ↓
+Episode 2 — RailThreat-FRMCS-LAB
+ML classifier detects jamming / spoofing / replay
+         ↓
+Episode 3 — FRMCS-RAIL-IQ
+Corridor risk engine propagates threat across 10 towers
+Fires response actions downstream
+         ↓
+Episode 1 — RailGuard-PKI
+PKI pauses AT issuance on compromised tower
+         ↓
+Episode 7 — FRMCS-NTN-Failover
+Satellite link activated when terrestrial corridor fails
 ```
 
 | # | Project | Role | Key Tech | Status |
